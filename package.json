@@ -1,0 +1,33 @@
+{
+  "name": "calculator_web",
+  "version": "1.0.0",
+  "homepage": "https://dbalova.github.io/calculator_web",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config-node-env production --config webpack.config.js",
+    "start": "webpack-dev-server --config-node-env development --open",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.4",
+    "sass": "^1.93.2",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.102.0",
+    "webpack-cli": "^6.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "babel-loader": "^10.0.0",
+    "gh-pages": "^6.3.0",
+    "webpack-dev-server": "^5.2.2"
+  }
+}

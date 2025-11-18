@@ -1,0 +1,15 @@
+@mixin button-style() {
+    border: 2px solid var(--dark-color);
+    border-radius: 15px;
+    box-shadow: 5px 4px 0px -1px var(--dark-color);
+    font-weight: 600; 
+    background-color: var(--bg-color);
+    transition: all 0.1s ease;
+     &:hover{
+        background-color: var(--hover-color);
+    }
+    &:active {
+        transform: translateY(2px);
+        box-shadow: 0px 0px 2px var(--dark-color);
+    }
+}

@@ -1,0 +1,105 @@
+@use 'fonts' as f;
+@use 'variables' as *;
+@use 'mixins' as m;
+
+a {
+    color: inherit;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+        color: inherit;
+        text-decoration: none;
+    }
+    &:visited {
+        color: inherit;
+    }
+}
+p {
+    margin: 0;
+}
+ul {
+    list-style: none;
+    padding-inline-start: 0;
+    margin: 0;
+}
+button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    font-family: 'Space Grotesk', sans-serif;
+}
+body {
+    font: 400 18px/normal 'Space Grotesk', sans-serif;
+    color: var(--dark-color);
+    background-color: var(--hover-color);
+    margin: 0px;
+}
+.grid {
+    --gridColumns: 1;
+    display: grid;
+    grid-template-columns: repeat(var(--gridColumns), 1fr);
+    gap: 15px;
+    @for $i from 2 through 12 {
+        &--#{$i} {
+            --gridColumns: #{$i};
+        }
+    }
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    height: 600px;
+    background-color: var(--bg-color);
+    border: 2px solid var(--dark-color);
+    border-radius: 15px;
+    box-shadow: 12px 11px 0px -2px var(--dark-color);
+    &__screen {
+        overflow:hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        height: 20%;
+        font-size: 52px;
+        font-weight: 600;
+        padding: 15px;
+    }
+    &__body {
+        padding: 15px;
+        background-color: var(--main-color);
+        border-radius: 15px;
+    }
+}
+.input-keys {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.num-button {  
+    @include m.button-style();
+    width: 70px;
+    height: 70px;
+    font-size: 16px;
+}
+.equals-button {
+    @include m.button-style();
+    margin-top: 30px;
+    width: 100%;
+    height: 70px;
+    font-size: 32px;
+}
