@@ -63,15 +63,17 @@ body {
     border-radius: 15px;
     box-shadow: 12px 11px 0px -2px var(--dark-color);
     &__screen {
-        overflow:hidden;
+        overflow: hidden;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: end;
         height: 20%;
+        padding: 15px;
         font-size: 52px;
         font-weight: 600;
-        padding: 15px;
+        word-wrap: break-word; 
+        word-break: break-all; 
     }
     &__body {
         padding: 15px;

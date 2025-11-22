@@ -5,7 +5,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const loader = require('sass-loader');
 
 module.exports = {
-  entry: './docs/js/index.js',
+  entry: './src/js/index.js',
   output: {
     filename: 'bundle.[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
@@ -43,7 +43,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './docs/index.html',
+      template: './src/index.html',
       filename: 'index.html',
     }),
   

@@ -7,7 +7,8 @@
   "scripts": {
     "build": "webpack --config-node-env production --config webpack.config.js",
     "start": "webpack-dev-server --config-node-env development --open",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +29,7 @@
     "@babel/preset-env": "^7.28.3",
     "babel-loader": "^10.0.0",
     "gh-pages": "^6.3.0",
+    "jest": "^30.2.0",
     "webpack-dev-server": "^5.2.2"
   }
 }
